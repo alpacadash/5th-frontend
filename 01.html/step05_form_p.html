@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="wrap">
+
+    <h1>고객 만족도 설문조사</h1>
+
+    <form action="#" method="post">
+
+    <div class="row">
+        <label for="name">이름</label>
+        <input id="name" name="name" type="text">
+    </div>
+
+    <div class="row">
+        <label for="age">나이</label>
+        <input id="age" name="age" type="text" class="age">
+    </div>
+
+    <div class="row options">
+        <span class="label-title">방문 경로</span>
+        <label><input type="radio" name="route" value="search"> 검색 엔진</label>
+        <label><input type="radio" name="route" value="ad"> 광고</label>
+        <label><input type="radio" name="route" value="recommend"> 지인 추천</label>
+    </div>
+
+    <div class="row options">
+        <span class="label-title">관심 주제 (복수 선택 가능)</span>
+        <label><input type="checkbox" name="interest" value="tech"> 기술</label>
+        <label><input type="checkbox" name="interest" value="design"> 디자인</label>
+        <label><input type="checkbox" name="interest" value="marketing"> 마케팅</label>
+    </div>
+
+    <div class="row">
+        <label for="freq" class="label-title">방문 빈도</label>
+        <select id="freq" name="frequency">
+            <option selected disabled>선택하세요</option>
+            <option value="daily">매일</option>
+            <option value="weekly">주 1~2회</option>
+            <option value="monthly">월 1~2회</option>
+            <option value="rare">거의 없음</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <label for="comment" class="label-title">추가 의견</label>
+        <textarea id="comment" name="comment"
+            placeholder="개선 사항이나 의견을 자유롭게 작성해주세요"></textarea>
+    </div>
+
+    <div class="row">
+        <button type="submit">제출하기</button>
+    </div>
+
+    </form>
+
+</div>
+</body>
+</html>

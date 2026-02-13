@@ -1,0 +1,186 @@
+/* 기본 설정 및 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #000;
+    background-color: #fff;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 네비게이션 스타일 */
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-links, .nav-actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.brand-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin: 1rem 0;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s;
+}
+
+.nav-item:hover {
+    opacity: 0.6;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    cursor: pointer;
+}
+
+/* 헤더 스타일 */
+.page-header {
+    padding: 4rem 0;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+/* 제품 그리드 스타일 */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.product-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-right: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.product-image-wrapper {
+    aspect-ratio: 4 / 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    transition: transform 0.5s ease;
+}
+
+.product-item:hover .product-image-wrapper {
+    transform: scale(1.05);
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 제품 상세 정보부 */
+.product-info {
+    padding: 1.5rem;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid #f3f4f6;
+    background-color: #fff;
+}
+
+.product-name {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    margin-bottom: 0.25rem;
+}
+
+.product-category {
+    font-size: 10px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.product-price {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+/* 푸터 */
+.site-footer {
+    padding: 3rem 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.copyright {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #9ca3af;
+}
+
+/* 반응형 미디어 쿼리 */
+@media (min-width: 768px) {
+    .main-nav {
+        flex-direction: row;
+    }
+    
+    .brand-logo {
+        margin: 0;
+    }
+
+    .product-item {
+        width: 33.333%;
+    }
+
+    .page-title {
+        font-size: 3.75rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .product-item {
+        border-right: none;
+    }
+}
